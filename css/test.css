@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#menu-btn, #sub1-chk {
+  display: none;
+}
+
+#menu-btn + label {
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  transition: 0.5s;
+}
+#menu-btn + label .btn-line {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: salmon;
+  margin-bottom: 5px;
+}
+
+.m-nav {
+  position: fixed;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: lightblue;
+  transition: 0.5s;
+  right: -300px;
+}
+.m-nav label {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  cursor: pointer;
+  border-bottom: 1px solid #000;
+}
+.m-nav label:nth-child(2) {
+  margin-top: 40px;
+}
+.m-nav ul {
+  transition: 0.5s;
+  height: 0;
+  overflow: hidden;
+}
+.m-nav ul li {
+  text-align: center;
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px;
+}
+.m-nav ul li a {
+  font-weight: bold;
+}
+
+#sub1-chk:checked ~ ul {
+  height: 200px;
+}
+
+#menu-btn:checked ~ .m-nav {
+  left: 0;
+}/*# sourceMappingURL=test.css.map */
